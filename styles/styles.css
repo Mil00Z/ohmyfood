@@ -1,8 +1,20 @@
+.debeug {
+  border: 3px dashed var(--testing);
+}
+.debeug-alt {
+  border: 2px dotted var(--debeug);
+}
+
 :root {
   --primary-color:#9356DC;
-  --secondart-color:#FF79D9;
+  --secondary-color:#FF79D9;
   --third-color:#99E2D0;
-  --testing:#FOF;
+  --debeug:crimson;
+  --testing:#FF00FF;
+}
+
+h1 {
+  color: var(--primary-color);
 }
 
 /*# sourceMappingURL=styles.css.map */
