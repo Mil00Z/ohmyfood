@@ -1,0 +1,12 @@
+// My local Var
+@import '_variables.scss';
+
+:root{
+
+    --primary-color:#{$primary-color};
+    --secondart-color:#{$secondary-color};
+    --third-color:#{$third-color};
+
+    --testing:#{$testing-color};
+
+}
