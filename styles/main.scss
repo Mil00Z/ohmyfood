@@ -1,12 +1,18 @@
-// My local Var
-@import '_variables.scss';
+@import 'base/all';
+@import 'layouts/all';
 
 :root{
 
-    --primary-color:#{$primary-color};
-    --secondart-color:#{$secondary-color};
-    --third-color:#{$third-color};
+    // Colors
+    @each $color-name, $color-value in $colors {
+        --#{$color-name}:#{$color-value};
+    }
 
+    //Anothers
     --testing:#{$testing-color};
 
+}
+
+h1 {
+    color:var(--primary-color);
 }
