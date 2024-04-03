@@ -14,16 +14,17 @@
   --secondary-color:#FF79D9;
   --third-color:#99E2D0;
   --debeug:crimson;
-  --white:#FFF;
-  --black:#000;
+  --black-color:#000;
+  --white-color:#fff;
   --testing:#FF00FF;
 }
 
 h1 {
-  color: var(--third-color);
+  color: var(--white-color);
   text-align: center;
   padding: 1rem;
-  background: var(--primary-color);
+  background: var(--testing);
+  text-shadow: 2px 3px 10px var(--black-color);
 }
 
 /*# sourceMappingURL=styles.css.map */
