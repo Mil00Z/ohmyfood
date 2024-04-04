@@ -1,0 +1,27 @@
+@mixin button($button-type:link) {
+
+    @if $button-type == link {
+        --element:#{$button-type};
+        --radius:50px;
+        --op:.22;
+        width:fit-content;
+        padding:1rem;
+        border:var(--border);
+        border-radius: var(--radius);
+        background:var(--primary-color);
+        color:var(--white-color);
+        font : {
+            family:var(--body-font);
+            size:1rem;
+            weight:500;
+        };
+        box-shadow:2px 5px 10px rgba(0,0,0,var(--op));
+
+    }
+
+    @else {
+        --test:'fail';
+    }
+
+
+}

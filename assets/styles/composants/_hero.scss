@@ -1,0 +1,25 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:var(--body-padding-vm);
+
+    &--title {
+        @include title(hero);
+        text-align: center;
+    }
+    
+    &--baseline {
+        font : {
+            family:var(--body-font);
+            size:1.25rem;
+            weight:300;
+        }
+        text-align: center;
+    }
+    
+    &--link {
+        @include button();
+    }
+}

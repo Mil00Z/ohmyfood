@@ -1,0 +1,36 @@
+.card {
+    --paddingCard:1rem;
+    --card-radius:var(--radius);
+    --op:.36;
+    display:flex;
+    padding:var(--paddingCard);
+    background-color: white;
+    border: var(--border);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
+    transition: var(--regTransition);
+    will-change: transform;
+
+
+    &-row{
+        flex-direction: row;
+    }
+
+    &-column {
+        flex-direction: column;
+    }
+
+    &-content{
+
+    }
+
+    &-thumbnail{
+
+    }
+
+    &-caca{
+
+
+    }
+}

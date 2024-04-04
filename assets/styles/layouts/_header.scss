@@ -1,1 +1,24 @@
 // HEADER
+
+.logo {
+    margin:0;
+    padding:1rem;
+    @include title(logo);
+    background:var(--white-color);
+}
+
+.geoloc {
+    --gap:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:var(--body-padding-vm);
+    column-gap: var(--gap);
+    font : {
+        size:1rem;
+        weight:600;
+    }
+    color:var(--grey-color-1);
+    // box-shadow: inset 0px -3px 12px rgba(0, 0, 0, 0.19),6px 0px 12px rgba(0, 0, 0, 0.22);
+    background:var(--grey-color-2);
+}

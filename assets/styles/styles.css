@@ -1,3 +1,31 @@
+/* RESETS / GENERALS */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+option,
+button {
+  font: inherit;
+}
+
+img,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .debeug {
   --color:crimson;
   outline: 4px dashed var(--color);
@@ -9,37 +37,128 @@
   outline-color: var(--color);
 }
 
+.card {
+  --paddingCard:1rem;
+  --card-radius:var(--radius);
+  --op:.36;
+  display: flex;
+  padding: var(--paddingCard);
+  background-color: white;
+  border: var(--border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
+  transition: var(--regTransition);
+  will-change: transform;
+}
+.card-row {
+  flex-direction: row;
+}
+.card-column {
+  flex-direction: column;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--body-padding-vm);
+}
+.hero--title {
+  margin-block: 0;
+  font-family: var(--body-font);
+  font-weight: 800;
+  font-size: var(--title-font-size);
+  text-align: center;
+  text-align: center;
+}
+.hero--baseline {
+  font-family: var(--body-font);
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center;
+}
+.hero--link {
+  --element:link;
+  --radius:50px;
+  --op:.22;
+  width: fit-content;
+  padding: 1rem;
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, var(--op));
+}
+
+.logo {
+  margin: 0;
+  padding: 1rem;
+  font-family: var(--title-font);
+  font-size: 1.8rem;
+  color: var(--grey-color-1);
+  text-align: center;
+  background: var(--white-color);
+}
+
+.geoloc {
+  --gap:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--body-padding-vm);
+  column-gap: var(--gap);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--grey-color-1);
+  background: var(--grey-color-2);
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  padding: var(--body-padding-vm);
+}
+.restaurants {
+  padding: var(--body-padding-vm);
+}
+
 :root {
   --primary-color:#9356DC;
   --secondary-color:#FF79D9;
   --third-color:#99E2D0;
+  --background-color:#F6F6F6;
+  --grey-color-1:#353535;
+  --grey-color-2:#EAEAEA;
   --debeug:crimson;
   --black-color:#000;
   --white-color:#fff;
-  --main-font:Roboto,sans-serif;
   --body-font:Roboto,sans-serif;
   --body-font-size:1rem;
   --title-font:Shrikhand,serif;
   --title-font-size:1.5rem;
   --baseline-font:Roboto,sans-serif;
+  --radius:15px;
+  --border:1px solid var(--primary-color);
+  --square:100px;
+  --body-padding-vm:1rem;
+  --body-padding-tab:1.35rem;
+  --body-padding-desk:2rem;
   --testing:#FF00FF;
 }
 
 body {
-  font-family: var(--main-font);
+  --layout:"Mobile";
+  --padding:0;
+  margin: 0;
+  padding: var(--padding);
+  font-family: var(--body-font);
   font-weight: 400;
   font-size: 1rem;
-}
-
-h1 {
-  padding: 1rem;
-  font-family: var(--title-font);
-  font-weight: 400;
-  font-size: var(--title-font-size);
-  color: var(--white-color);
-  text-align: center;
-  background: var(--testing);
-  text-shadow: 2px 3px 10px var(--black-color);
+  background: var(--white-color);
 }
 
 /*# sourceMappingURL=styles.css.map */
