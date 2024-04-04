@@ -8,30 +8,38 @@
         }
         color:var(--grey-color-1);
         text-align: center;
-        
+
     }
 
     @else if $title-type == 'hero' {
 
         margin-block: 0;
         font : {
-            family: var(--body-font);
-            weight:800;
+            weight:var(--weight-bold);
             size:var(--title-font-size);
         }
         text-align: center;
        
     }
 
-    @else if $title-type == section {
+    @else if $title-type == 'section' {
 
         font : {
-            family: var(--title-font);
-            weight:800;
+            weight:var(--weight-bold);
             size:var(--title-font-size);
         }
         color:var(--black-color);
-        text-align: center;
+
+    }
+
+    @else if $title-type == 'menu' {
+
+        font : {
+            family: var(--title-font);
+            weight:var(--weight-bold);
+            size:var(--title-font-size);
+        }
+        color:var(--black-color);
 
     }
 }
