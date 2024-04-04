@@ -165,13 +165,14 @@ a {
   font-size: 1rem;
   font-weight: var(--weight-medium);
   color: var(--black-color);
-  background: var(--grey-color-2);
+  background: var(--background-color);
   border-radius: var(--radius);
   box-shadow: 2px 5px 10px rgba(0, 0, 0, var(--op));
 }
 .notice--link > i {
   margin-right: 15px;
   color: var(--grey-color-1);
+  font-size: 19px;
 }
 .notice--link > i.fa-store {
   color: var(--primary-color);
