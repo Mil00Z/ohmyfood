@@ -181,6 +181,33 @@ a {
   padding: var(--body-padding-vm);
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: var(--body-padding-vm);
+  background: var(--grey-color-1);
+}
+.footer--title {
+  color: var(--white-color);
+  font-family: var(--title-font);
+  font-size: 1.25rem;
+  font-weight: var(--weight-medium);
+}
+.footer--nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.85rem;
+}
+.footer--link {
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: var(--weight-regular);
+}
+.footer--link > i {
+  margin-right: 5px;
+}
+
 :root {
   --primary-color:#9356DC;
   --secondary-color:#FF79D9;

@@ -1,1 +1,41 @@
 // FOOTER
+.footer {
+  
+    display: flex;
+    flex-direction: column;
+    row-gap:1rem;
+    padding:var(--body-padding-vm);
+    background:var(--grey-color-1);
+
+    &--title{
+
+        color:var(--white-color);
+        font :{
+            family:var(--title-font);
+            size:1.25rem;
+            weight:var(--weight-medium);
+        }
+
+
+    }
+
+    &--nav {
+        display: flex;
+        flex-direction: column;
+        row-gap:.85rem;
+    }
+
+    &--link {
+
+        color:var(--white-color);
+        font:{
+            size:1rem;
+            weight:var(--weight-regular);
+        }
+
+        & > i {
+            margin-right:5px;
+        }
+    }
+
+}
