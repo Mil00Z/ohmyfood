@@ -11,9 +11,8 @@
         background:var(--primary-color);
         color:var(--white-color);
         font : {
-            family:var(--body-font);
             size:1rem;
-            weight:500;
+            weight:var(--weight-medium);
         };
         box-shadow:2px 5px 10px rgba(0,0,0,var(--op));
 

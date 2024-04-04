@@ -66,8 +66,7 @@ a {
 }
 .hero--title {
   margin-block: 0;
-  font-family: var(--body-font);
-  font-weight: 800;
+  font-weight: var(--weight-bold);
   font-size: var(--title-font-size);
   text-align: center;
   text-align: center;
@@ -75,7 +74,7 @@ a {
 .hero--baseline {
   font-family: var(--body-font);
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: var(--weight-light);
   text-align: center;
 }
 .hero--link {
@@ -88,9 +87,8 @@ a {
   border-radius: var(--radius);
   background: var(--primary-color);
   color: var(--white-color);
-  font-family: var(--body-font);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: var(--weight-medium);
   box-shadow: 2px 5px 10px rgba(0, 0, 0, var(--op));
 }
 
@@ -112,16 +110,73 @@ a {
   padding: var(--body-padding-vm);
   column-gap: var(--gap);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: var(--weight-medium);
   color: var(--grey-color-1);
   background: var(--grey-color-2);
 }
 
 .notice {
-  display: flex;
-  flex-direction: column;
   padding: var(--body-padding-vm);
 }
+.notice--list {
+  margin: 0;
+  padding: 0;
+  counter-reset: item;
+  list-style-type: none;
+}
+.notice--list > li {
+  position: relative;
+  margin-block: 1rem;
+  padding-left: var(--body-padding-vm);
+}
+.notice--list > li::before {
+  --square:25px;
+  --radius:50px;
+  content: counter(item);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--square);
+  height: var(--square);
+  counter-increment: item;
+  background: var(--primary-color);
+  border-radius: var(--radius);
+  color: var(--white-color);
+  font-family: var(--body-font);
+  font-size: 12px;
+}
+.notice--title {
+  font-weight: var(--weight-bold);
+  font-size: var(--title-font-size);
+  color: var(--black-color);
+}
+.notice--link {
+  --op:.25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: var(--weight-medium);
+  color: var(--black-color);
+  background: var(--grey-color-2);
+  border-radius: var(--radius);
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, var(--op));
+}
+.notice--link > i {
+  margin-right: 15px;
+  color: var(--grey-color-1);
+}
+.notice--link > i.fa-store {
+  color: var(--primary-color);
+}
+
 .restaurants {
   padding: var(--body-padding-vm);
 }
@@ -141,6 +196,10 @@ a {
   --title-font:Shrikhand,serif;
   --title-font-size:1.5rem;
   --baseline-font:Roboto,sans-serif;
+  --weight-light:300;
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-bold:700;
   --radius:15px;
   --border:1px solid var(--primary-color);
   --square:100px;

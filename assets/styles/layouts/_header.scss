@@ -16,7 +16,7 @@
     column-gap: var(--gap);
     font : {
         size:1rem;
-        weight:600;
+        weight:var(--weight-medium);
     }
     color:var(--grey-color-1);
     // box-shadow: inset 0px -3px 12px rgba(0, 0, 0, 0.19),6px 0px 12px rgba(0, 0, 0, 0.22);
