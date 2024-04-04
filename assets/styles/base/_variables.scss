@@ -8,6 +8,15 @@ $colors: (
     white-color:#fff
 );
 
-$main-font:'Roboto';
-$second-font:'Shrikhand';
+// Fonts
+ $fonts: (
+    main-font: "Roboto,sans-serif",
+    body-font: "Roboto,sans-serif",
+    body-font-size:1rem,
+    title-font: "Shrikhand,serif",
+    title-font-size: 1.5rem,
+    baseline-font:"Roboto,sans-serif"
+ );
+
+
 $testing-color:#FF00FF;

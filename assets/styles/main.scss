@@ -8,15 +8,34 @@
         --#{$color-name}:#{$color-value};
     }
 
+    //Fonts
+    @each $font-name, $font-value in $fonts {
+        --#{$font-name}:#{$font-value};
+    }
+
     //Anothers
     --testing:#{$testing-color};
 
 }
 
+
+body {
+    font : {
+        family: var(--main-font);
+        weight:400;
+        size:1rem;
+    }
+}
 h1 {
+    padding:1rem;
+    font : {
+        family: var(--title-font);
+        weight:400;
+        size:var(--title-font-size);
+    }
     color:var(--white-color);
     text-align: center;
-    padding:1rem;
+    
     background:var(--testing);
     text-shadow:2px 3px 10px var(--black-color);
 }
