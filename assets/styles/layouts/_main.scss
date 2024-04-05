@@ -46,7 +46,7 @@
     }
 
     &--title {
-        @include title(section);
+        // @include title(section);
     }
 
     &--link{
@@ -57,7 +57,7 @@
         height: 70px;
         padding:1rem;
         text-align: center;
-        font :{
+        font:{
             size:1rem;
             weight:var(--weight-medium);
         }
@@ -82,7 +82,107 @@
 
 
 .restaurants {
-
     padding:var(--body-padding-vm);
 
+    &--list {
+        --gap:2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap:var(--gap)
+    }
+
+    &--title {
+        // @include title(section);
+    }
+
+    &--thumb {
+        max-height:230px;
+        object-fit: cover;
+
+    }
+
+    &--status {
+        --pos:4%;
+        position: absolute;
+        right:var(--pos);
+        top:var(--pos);
+       
+        &.new {
+            width:fit-content;
+            padding:10px;
+            border-radius:2px;
+            font:{
+                size:.85rem;
+                weight:var(--weight-medium);
+            }
+            background:var(--third-color);
+            color:var(--fourth-color);
+        }
+
+    
+        &.none {
+            display:none,
+        }
+
+    
+
+
+    }
+
+    &--content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:var(--paddingCard);
+    }
+
+    
+    &--icons{
+        i {
+            transform-origin: center;
+            transition: var(--transition-regular);
+
+            &::before{
+            font-size: 1.25rem;
+
+            }
+
+            &:hover{
+                font-weight:900;
+                transform: scale(1.25);
+                color:var(--primary-color);
+                cursor: pointer;
+            }
+        }
+
+       
+    
+    }
+
+    &--text{
+
+    }
+
+    &--name {
+        margin-block:0;
+
+        font:{
+            size:1.125rem;
+            weight:var(--weight-bold);
+        }
+
+    }
+
+    &--geoloc {
+
+        font:{
+            size:1,0625rem;
+            weight:var(--weight-light);
+        }
+
+    }
+
+
+
+   
 }

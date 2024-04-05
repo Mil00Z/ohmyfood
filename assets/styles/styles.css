@@ -37,14 +37,18 @@ a {
   outline-color: var(--color);
 }
 
+.section_title {
+  font-weight: var(--weight-bold);
+  font-size: var(--title-font-size);
+  color: var(--black-color);
+}
+
 .card {
   --paddingCard:1rem;
   --card-radius:var(--radius);
   --op:.36;
   display: flex;
-  padding: var(--paddingCard);
   background-color: white;
-  border: var(--border);
   border-radius: var(--card-radius);
   overflow: hidden;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
@@ -57,6 +61,28 @@ a {
 .card-column {
   flex-direction: column;
 }
+
+.card-restaurants {
+  --paddingCard:1rem;
+  --card-radius:var(--radius);
+  --op:.36;
+  display: flex;
+  background-color: white;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
+  transition: var(--regTransition);
+  will-change: transform;
+  --card-type:restaurants;
+  position: relative;
+}
+.card-restaurants-row {
+  flex-direction: row;
+}
+.card-restaurants-column {
+  flex-direction: column;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -149,11 +175,6 @@ a {
   font-family: var(--body-font);
   font-size: 12px;
 }
-.notice--title {
-  font-weight: var(--weight-bold);
-  font-size: var(--title-font-size);
-  color: var(--black-color);
-}
 .notice--link {
   --op:.25;
   display: flex;
@@ -180,6 +201,62 @@ a {
 
 .restaurants {
   padding: var(--body-padding-vm);
+}
+.restaurants--list {
+  --gap:2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap);
+}
+.restaurants--thumb {
+  max-height: 230px;
+  object-fit: cover;
+}
+.restaurants--status {
+  --pos:4%;
+  position: absolute;
+  right: var(--pos);
+  top: var(--pos);
+}
+.restaurants--status.new {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: var(--weight-medium);
+  background: var(--third-color);
+  color: var(--fourth-color);
+}
+.restaurants--status.none {
+  display: none;
+}
+.restaurants--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--paddingCard);
+}
+.restaurants--icons i {
+  transform-origin: center;
+  transition: var(--transition-regular);
+}
+.restaurants--icons i::before {
+  font-size: 1.25rem;
+}
+.restaurants--icons i:hover {
+  font-weight: 900;
+  transform: scale(1.25);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.restaurants--name {
+  margin-block: 0;
+  font-size: 1.125rem;
+  font-weight: var(--weight-bold);
+}
+.restaurants--geoloc {
+  font-size: 1, 625rem;
+  font-weight: var(--weight-light);
 }
 
 .footer {
@@ -213,6 +290,7 @@ a {
   --primary-color:#9356DC;
   --secondary-color:#FF79D9;
   --third-color:#99E2D0;
+  --fourth-color:#008766;
   --background-color:#F6F6F6;
   --grey-color-1:#353535;
   --grey-color-2:#EAEAEA;
@@ -230,7 +308,7 @@ a {
   --weight-bold:700;
   --radius:15px;
   --border:1px solid var(--primary-color);
-  --square:100px;
+  --transition-regular:all 0.3s ease-in-out;
   --body-padding-vm:1rem;
   --body-padding-tab:1.35rem;
   --body-padding-desk:2rem;
