@@ -1,4 +1,4 @@
-@mixin title($title-type) {
+@mixin title($title-type:'') {
 
     @if $title-type == 'logo' {
 
@@ -44,3 +44,7 @@
     }
 }
 
+// Specific Globale Class
+.section_title {
+    @include title(section);
+}

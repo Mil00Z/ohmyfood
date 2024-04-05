@@ -3,6 +3,7 @@ $colors: (
     primary-color:#9356DC,
     secondary-color:#FF79D9,
     third-color:#99E2D0,
+    fourth-color:#008766,
     background-color:#F6F6F6,
     grey-color-1:#353535,
     grey-color-2:#EAEAEA,
@@ -28,7 +29,7 @@ $colors: (
  $items: (
     radius:15px,
     border:1px solid var(--primary-color),
-    square: 100px
+    transition-regular:all .3s ease-in-out
  );
 
  $responsiveness: (
