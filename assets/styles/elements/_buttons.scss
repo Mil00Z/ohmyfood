@@ -3,20 +3,31 @@
     @if $button-type == link {
         --element:#{$button-type};
         --radius:50px;
-        --op:.22;
+        --op:.25;
         width:fit-content;
         padding:1rem;
-        border:var(--border);
         border-radius: var(--radius);
-        background:var(--primary-color);
+        background:linear-gradient(var(--linear-gradient-link));
         color:var(--white-color);
         font : {
             size:1rem;
             weight:var(--weight-medium);
         };
-        box-shadow:2px 5px 10px rgba(0,0,0,var(--op));
+        box-shadow:0 5px 10px 0 rgba(0, 0, 0, var(--op));;
+        transition:var(--transition-regular);
+
+        &:hover{
+        --op:.4;
+        opacity:.8;
+        }
 
     }
+
+    @else if $button-type == cta {
+
+        
+    }
+
 
     @else {
         --test:'fail';

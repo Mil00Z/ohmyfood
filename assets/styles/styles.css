@@ -106,16 +106,20 @@ a {
 .hero--link {
   --element:link;
   --radius:50px;
-  --op:.22;
+  --op:.25;
   width: fit-content;
   padding: 1rem;
-  border: var(--border);
   border-radius: var(--radius);
-  background: var(--primary-color);
+  background: linear-gradient(var(--linear-gradient-link));
   color: var(--white-color);
   font-size: 1rem;
   font-weight: var(--weight-medium);
-  box-shadow: 2px 5px 10px rgba(0, 0, 0, var(--op));
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, var(--op));
+  transition: var(--transition-regular);
+}
+.hero--link:hover {
+  --op:.4;
+  opacity: 0.8;
 }
 
 .logo {
@@ -297,6 +301,8 @@ a {
   --debeug:crimson;
   --black-color:#000;
   --white-color:#fff;
+  --linear-gradient-link:to bottom, var(--secondary-color) 0%, var(--primary-color) 60%, var(--primary-color) 100%;
+  --linear-gradient-heart:to top, var(--secondary-color) 0%, var(--primary-color) 60%, var(--primary-color) 100%;
   --body-font:Roboto,sans-serif;
   --body-font-size:1rem;
   --title-font:Shrikhand,serif;

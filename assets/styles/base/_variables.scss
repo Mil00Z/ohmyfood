@@ -9,7 +9,10 @@ $colors: (
     grey-color-2:#EAEAEA,
     debeug: crimson,
     black-color:#000,
-    white-color:#fff
+    white-color:#fff,
+    linear-gradient-link:'to bottom, var(--secondary-color) 0%, var(--primary-color) 60%, var(--primary-color) 100%',
+    linear-gradient-heart:'to top, var(--secondary-color) 0%, var(--primary-color) 60%, var(--primary-color) 100%'
+   
 );
 
 // Fonts
