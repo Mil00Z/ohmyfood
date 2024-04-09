@@ -22,12 +22,11 @@
     }
 
     
-    @if $card-type == restaurants {
+        @if $card-type == restaurants {
 
-    --card-type:#{$card-type};
+            --card-type:#{$card-type};
 
-
-}
+        }
     
         
     

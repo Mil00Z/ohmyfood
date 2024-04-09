@@ -1,9 +1,10 @@
 @import 'base/all';
 @import 'elements/all';
 @import 'composants/all';
+@import 'pages/all';
 @import 'layouts/all';
 
-:root{
+:root {
 
     // Colors
     @each $color-name, $color-value in $colors {
