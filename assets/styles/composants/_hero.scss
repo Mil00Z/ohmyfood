@@ -6,7 +6,8 @@
     padding:var(--body-padding-vm);
 
     &--title {
-        @include title(hero);
+        margin-block: 0;
+        @include title(hero-index);
         text-align: center;
     }
     
@@ -20,6 +21,7 @@
     }
     
     &--link {
-        @include button();
+        width:fit-content;
+        @include button(link);
     }
 }

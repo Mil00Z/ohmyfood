@@ -1,25 +1,32 @@
 @mixin title($title-type:'') {
+    // --test:#{$title-type};
 
     @if $title-type == 'logo' {
 
         font : {
             family: var(--title-font);
-            size:1.8rem;
+            size:1.875rem;
         }
         color:var(--grey-color-1);
         text-align: center;
-
     }
 
-    @else if $title-type == 'hero' {
-
-        margin-block: 0;
+    @else if $title-type == 'hero-index' {
+        
         font : {
             weight:var(--weight-bold);
             size:var(--title-font-size);
         }
-        text-align: center;
-       
+    
+    }
+
+    @else if $title-type == 'hero-store' {
+        font : {
+            family: var(--title-font);
+            size:1.75rem;
+        }
+        color:#101010;
+
     }
 
     @else if $title-type == 'section' {
@@ -42,6 +49,8 @@
         color:var(--black-color);
 
     }
+
+
 }
 
 // Specific Globale Class
