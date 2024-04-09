@@ -1,5 +1,5 @@
 #Map Files
-*.map
+*styles/styles.css.map
 
 #Shitty MAC subfile
 *.DS_STORE
