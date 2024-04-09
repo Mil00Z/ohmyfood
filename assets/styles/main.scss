@@ -1,0 +1,46 @@
+@import 'base/all';
+@import 'elements/all';
+@import 'composants/all';
+@import 'pages/all';
+@import 'layouts/all';
+
+:root {
+
+    // Colors
+    @each $color-name, $color-value in $colors {
+        --#{$color-name}:#{$color-value};
+    }
+
+    //Fonts
+    @each $font-name, $font-value in $fonts {
+        --#{$font-name}:#{$font-value};
+    }
+
+    //Anothers
+    @each $item-name, $item-value in $items {
+        --#{$item-name}:#{$item-value};
+    }
+
+    //Spacing
+    @each $responsive-name, $responsive-value in $responsiveness {
+        --#{$responsive-name}:#{$responsive-value};
+    }
+
+    --testing:#{$testing-color};
+
+}
+
+
+body {
+    --layout:'Mobile';
+    --padding:0;
+    margin: 0;
+    padding: var(--padding);
+    font : {
+        family: var(--body-font);
+        weight:400;
+        size:1rem;
+    }
+    background:var(--white-color);
+}
+

@@ -1,0 +1,48 @@
+@mixin card($card-type:'') {
+
+    --paddingCard:1rem;
+    --card-radius:var(--radius);
+    --op:.36;
+    display:flex;
+    
+    background-color: white;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
+    transition: var(--regTransition);
+    will-change: transform;
+    
+    
+    &-row{
+            flex-direction: row;
+    }
+    
+    &-column {
+            flex-direction: column;
+    }
+
+    
+        @if $card-type == restaurants {
+
+            --card-type:#{$card-type};
+
+        }
+    
+        
+    
+    
+}
+
+
+
+
+
+
+.card {
+    @include card();
+}
+
+.card-restaurants {
+    @include card(restaurants);
+    position:relative;
+}

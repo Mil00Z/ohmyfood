@@ -1,0 +1,29 @@
+/* RESETS / GENERALS */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+option,
+button {
+    font:inherit;
+}
+
+
+img,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+

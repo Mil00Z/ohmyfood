@@ -1,0 +1,59 @@
+@mixin title($title-type:'') {
+    // --test:#{$title-type};
+
+    @if $title-type == 'logo' {
+
+        font : {
+            family: var(--title-font);
+            size:1.875rem;
+        }
+        color:var(--grey-color-1);
+        text-align: center;
+    }
+
+    @else if $title-type == 'hero-index' {
+        
+        font : {
+            weight:var(--weight-bold);
+            size:var(--title-font-size);
+        }
+    
+    }
+
+    @else if $title-type == 'hero-store' {
+        font : {
+            family: var(--title-font);
+            size:1.75rem;
+        }
+        color:#101010;
+
+    }
+
+    @else if $title-type == 'section' {
+
+        font : {
+            weight:var(--weight-bold);
+            size:var(--title-font-size);
+        }
+        color:var(--black-color);
+
+    }
+
+    @else if $title-type == 'menu' {
+
+        font : {
+            family: var(--title-font);
+            weight:var(--weight-bold);
+            size:var(--title-font-size);
+        }
+        color:var(--black-color);
+
+    }
+
+
+}
+
+// Specific Globale Class
+.section_title {
+    @include title(section);
+}

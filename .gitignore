@@ -1,0 +1,5 @@
+#Map Files
+*.map
+
+#Shitty MAC subfile
+*.DS_STORE

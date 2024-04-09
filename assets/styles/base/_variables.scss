@@ -1,0 +1,53 @@
+// Colors
+$colors: (
+    primary-color:#9356DC,
+    secondary-color:#FF79D9,
+    third-color:#99E2D0,
+    fourth-color:#008766,
+    background-color:#F6F6F6,
+    grey-color-1:#353535,
+    grey-color-2:#EAEAEA,
+    debeug: crimson,
+    black-color:#000,
+    white-color:#fff,
+    linear-gradient-link:'to bottom, var(--secondary-color) 0%, var(--primary-color) 60%, var(--primary-color) 100%',
+    linear-gradient-heart:'to top, var(--secondary-color) 0%, var(--primary-color) 60%, var(--primary-color) 100%'
+   
+);
+
+// Fonts
+ $fonts: (
+    body-font: "Roboto,sans-serif",
+    body-font-size:1rem,
+    title-font: "Shrikhand,serif",
+    title-font-size: 1.5rem,
+    baseline-font:"Roboto,sans-serif",
+    weight-light:300,
+    weight-regular:400,
+    weight-medium:500,
+    weight-bold:700
+ );
+
+ //Specials Items
+ $items: (
+    radius:15px,
+    border:1px solid var(--primary-color),
+    transition-regular:all .3s ease-in-out
+ );
+
+ $responsiveness: (
+   body-padding-vm:1rem,
+   body-padding-tab:1.35rem,
+   body-padding-desk:2rem,
+ );
+
+// Anothers
+$testing-color:#FF00FF;
+
+
+// Pages
+$pages : (
+   palette-gout:'../images/restaurants/menilmontant.jpg',
+   delice-sens:'../images/restaurants/folie-mericourt.jpg',
+   note-enchantee:'../images/restaurants/charonne.jpg'
+)

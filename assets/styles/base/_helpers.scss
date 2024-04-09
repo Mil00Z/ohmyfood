@@ -1,0 +1,17 @@
+.debeug {
+    --color:#{map-get($colors, debeug)};
+    outline:4px dashed var(--color);
+
+    &-alt{
+        --color:#{map-get($colors, secondary-color)};
+
+        outline: {
+            style:dotted;
+            width:2px;
+            color:var(--color);
+        }
+       
+    }      
+
+}
+
