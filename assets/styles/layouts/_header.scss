@@ -1,7 +1,22 @@
 // HEADER
 
+.featured {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-to-town {
+    margin-inline:var(--body-padding-vm) calc( (-1) * var(--body-padding-vm));
+
+    .fa-arrow-left {
+        font-size:1.4rem;
+        color:var(--grey-color-1);
+    }
+}
+
 .logo {
-    margin:0;
+    margin:0 auto;
     padding:1rem;
     @include title(logo);
     background:var(--white-color);
