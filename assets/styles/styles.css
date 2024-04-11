@@ -43,46 +43,6 @@ a {
   color: var(--black-color);
 }
 
-.card {
-  --paddingCard:1rem;
-  --card-radius:var(--radius);
-  --op:.36;
-  display: flex;
-  background-color: white;
-  border-radius: var(--card-radius);
-  overflow: hidden;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
-  transition: var(--regTransition);
-  will-change: transform;
-}
-.card-row {
-  flex-direction: row;
-}
-.card-column {
-  flex-direction: column;
-}
-
-.card-restaurants {
-  --paddingCard:1rem;
-  --card-radius:var(--radius);
-  --op:.36;
-  display: flex;
-  background-color: white;
-  border-radius: var(--card-radius);
-  overflow: hidden;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
-  transition: var(--regTransition);
-  will-change: transform;
-  --card-type:restaurants;
-  position: relative;
-}
-.card-restaurants-row {
-  flex-direction: row;
-}
-.card-restaurants-column {
-  flex-direction: column;
-}
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -121,156 +81,6 @@ a {
   opacity: 0.8;
 }
 
-.food-store .hero--title {
-  --radius:50px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-block: auto 0;
-  padding: 2.5rem var(--body-padding-vm) 1rem;
-  font-family: var(--title-font);
-  font-size: 1.75rem;
-  color: #101010;
-  border-radius: var(--radius) var(--radius) 0 0;
-  background: var(--white-color);
-  box-shadow: -4px -10px 12px 0px rgba(0, 0, 0, 0.22);
-}
-.food-store .hero--title .restaurants--icons {
-  margin-left: auto;
-}
-.food-store .menus {
-  padding: 0 var(--body-padding-vm);
-}
-.food-store .menus--content {
-  margin-bottom: 1rem;
-}
-.food-store .menus--title {
-  width: fit-content;
-  position: relative;
-  font-weight: 400;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-.food-store .menus--title::before {
-  content: "";
-  display: block;
-  width: 80%;
-  height: 3px;
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  background: var(--third-color);
-}
-.food-store .menus--list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-  margin-block: 1.5rem;
-}
-.food-store .menus--item {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  padding: 1rem;
-  border: 1px solid transparent;
-  border-radius: var(--radius);
-  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.25);
-}
-.food-store .menus--item-name {
-  margin-block: 0 0.25rem;
-  font-size: 1.25rem;
-  font-weight: var(--weight-medium);
-}
-.food-store .menus--item-desc {
-  font-size: 0.95rem;
-  font-weight: var(--weight-light);
-}
-.food-store .menus--item-price {
-  font-size: 0.95rem;
-  font-weight: var(--weight-bold);
-  color: var(--grey-color-1);
-}
-.food-store .menus--link {
-  display: block;
-  width: 190px;
-  margin: 2rem auto;
-  text-align: center;
-  --element:link;
-  --radius:50px;
-  --op:.25;
-  padding: 1rem;
-  border-radius: var(--radius);
-  background: linear-gradient(var(--linear-gradient-link));
-  color: var(--white-color);
-  font-size: 1rem;
-  font-weight: var(--weight-medium);
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, var(--op));
-  transition: var(--transition-regular);
-}
-.food-store .menus--link:hover {
-  --op:.4;
-  opacity: 0.8;
-}
-.food-store .menus--link:hover {
-  width: 250px;
-}
-.food-store.palette-gout {
-  --data-page:palette-gout;
-}
-.food-store.palette-gout .hero {
-  width: 100%;
-  min-height: 333px;
-  padding: 0;
-  background-size: cover;
-  background-position: center -50px;
-  background-image: url(../images/restaurants/menilmontant.jpg);
-}
-.food-store.delice-sens {
-  --data-page:delice-sens;
-}
-.food-store.delice-sens .hero {
-  width: 100%;
-  min-height: 333px;
-  padding: 0;
-  background-size: cover;
-  background-position: center -50px;
-  background-image: url(../images/restaurants/folie-mericourt.jpg);
-}
-.food-store.note-enchantee {
-  --data-page:note-enchantee;
-}
-.food-store.note-enchantee .hero {
-  width: 100%;
-  min-height: 333px;
-  padding: 0;
-  background-size: cover;
-  background-position: center -50px;
-  background-image: url(../images/restaurants/charonne.jpg);
-}
-
-.logo {
-  margin: 0;
-  padding: 1rem;
-  font-family: var(--title-font);
-  font-size: 1.875rem;
-  color: var(--grey-color-1);
-  text-align: center;
-  background: var(--white-color);
-}
-
-.geoloc {
-  --gap:20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: var(--body-padding-vm);
-  column-gap: var(--gap);
-  font-size: 1rem;
-  font-weight: var(--weight-medium);
-  color: var(--grey-color-1);
-  background: var(--grey-color-2);
-}
-
 .notice {
   padding: var(--body-padding-vm);
 }
@@ -306,7 +116,7 @@ a {
   font-size: 12px;
 }
 .notice--link {
-  --op:.25;
+  --op:.15;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,9 +134,140 @@ a {
   margin-right: 15px;
   color: var(--grey-color-1);
   font-size: 19px;
+  transition: var(--transition-regular);
 }
 .notice--link > i.fa-store {
   color: var(--primary-color);
+}
+.notice--link:hover {
+  --op:.25;
+}
+.notice--link:hover i {
+  transform: scale(1.15);
+  color: var(--primary-color);
+}
+
+.card {
+  --paddingCard:1rem;
+  --card-radius:var(--radius);
+  --op:.36;
+  display: flex;
+  background-color: white;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
+  transition: var(--transition-regular);
+  will-change: transform;
+}
+.card-row {
+  flex-direction: row;
+}
+.card-column {
+  flex-direction: column;
+}
+
+.menus {
+  padding: 0 var(--body-padding-vm);
+}
+.menus--content {
+  margin-bottom: 1rem;
+}
+.menus--title {
+  width: fit-content;
+  position: relative;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.menus--title::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 3px;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  background: var(--third-color);
+}
+.menus--list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-block: 1.5rem;
+}
+.menus--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.25);
+}
+.menus--item-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  padding: 0.95rem;
+}
+.menus--item-surprise {
+  width: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  transition: var(--transition-regular);
+}
+.menus--item-surprise > i {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  transition: var(--transition-regular);
+}
+.menus--item-name {
+  margin-block: 0 0.25rem;
+  font-size: 1.12rem;
+  font-weight: var(--weight-medium);
+}
+.menus--item-desc {
+  font-size: 0.94rem;
+  font-weight: var(--weight-light);
+}
+.menus--item-price {
+  font-size: 0.95rem;
+  font-weight: var(--weight-bold);
+  color: var(--grey-color-1);
+}
+.menus--item:hover {
+  cursor: pointer;
+}
+.menus--item:hover > .menus--item-surprise {
+  width: 17.5%;
+}
+.menus--link {
+  display: block;
+  width: 190px;
+  margin: 2rem auto;
+  text-align: center;
+  --element:link;
+  --radius:50px;
+  --op:.25;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: linear-gradient(var(--linear-gradient-link));
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: var(--weight-medium);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, var(--op));
+  transition: var(--transition-regular);
+}
+.menus--link:hover {
+  --op:.4;
+  opacity: 0.8;
+}
+.menus--link:hover {
+  width: 230px;
 }
 
 .restaurants {
@@ -338,7 +279,28 @@ a {
   flex-direction: column;
   row-gap: var(--gap);
 }
+.restaurants--card {
+  --paddingCard:1rem;
+  --card-radius:var(--radius);
+  --op:.36;
+  display: flex;
+  background-color: white;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
+  transition: var(--transition-regular);
+  will-change: transform;
+  position: relative;
+  --card-type:restaurants;
+}
+.restaurants--card-row {
+  flex-direction: row;
+}
+.restaurants--card-column {
+  flex-direction: column;
+}
 .restaurants--thumb {
+  width: 100%;
   max-height: 230px;
   object-fit: cover;
 }
@@ -368,16 +330,23 @@ a {
 }
 .restaurants--icons i {
   transform-origin: center;
-  transition: var(--transition-regular);
+  transform: scale(1);
+  will-change: transform;
 }
 .restaurants--icons i::before {
   font-size: 1.25rem;
+  font-weight: 400;
+  transition: font-weight 0.06s ease-in-out;
 }
 .restaurants--icons i:hover {
-  font-weight: 900;
-  transform: scale(1.25);
-  color: var(--primary-color);
+  transform: scale(1.15);
   cursor: pointer;
+}
+.restaurants--icons i:hover::before {
+  font-weight: 800;
+  background: linear-gradient(var(--linear-gradient-heart));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurants--name {
   margin-block: 0;
@@ -387,6 +356,117 @@ a {
 .restaurants--geoloc {
   font-size: 1, 625rem;
   font-weight: var(--weight-light);
+}
+
+.food-store .hero--title {
+  --radius:50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-block: auto 0;
+  padding: 2.5rem var(--body-padding-vm) 1rem;
+  font-family: var(--title-font);
+  font-size: 1.75rem;
+  color: #101010;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--white-color);
+  box-shadow: -4px -10px 12px 0px rgba(0, 0, 0, 0.22);
+}
+.food-store .hero--title .restaurants--icons {
+  margin-left: auto;
+}
+.food-store.palette-gout {
+  --data-page:palette-gout;
+}
+.food-store.palette-gout .hero {
+  width: 100%;
+  min-height: 333px;
+  padding: 0;
+  background-size: cover;
+  background-position: center -50px;
+  background-image: url(../images/restaurants/menilmontant.jpg);
+}
+.food-store.delice-sens {
+  --data-page:delice-sens;
+}
+.food-store.delice-sens .hero {
+  width: 100%;
+  min-height: 333px;
+  padding: 0;
+  background-size: cover;
+  background-position: center -50px;
+  background-image: url(../images/restaurants/folie-mericourt.jpg);
+}
+.food-store.note-enchantee {
+  --data-page:note-enchantee;
+}
+.food-store.note-enchantee .hero {
+  width: 100%;
+  min-height: 333px;
+  padding: 0;
+  background-size: cover;
+  background-position: center -50px;
+  background-image: url(../images/restaurants/charonne.jpg);
+}
+.food-store.la-francaise {
+  --data-page:la-francaise;
+}
+.food-store.la-francaise .hero {
+  width: 100%;
+  min-height: 333px;
+  padding: 0;
+  background-size: cover;
+  background-position: center -50px;
+  background-image: url(../images/restaurants/cite-rouge.jpg);
+}
+
+.featured {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-town {
+  margin-inline: var(--body-padding-vm) calc(-1 * var(--body-padding-vm));
+  transition: var(--transition-regular);
+}
+.back-to-town .fa-arrow-left {
+  font-size: 1.4rem;
+  color: var(--grey-color-1);
+}
+.back-to-town:hover {
+  animation: to-back 0.5s ease-in-out infinite alternate;
+}
+@keyframes to-back {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-5px);
+  }
+}
+
+.logo {
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: var(--title-font);
+  font-size: 1.875rem;
+  color: var(--grey-color-1);
+  text-align: center;
+  background: var(--white-color);
+}
+
+.geoloc {
+  --gap:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--body-padding-vm);
+  column-gap: var(--gap);
+  font-size: 1rem;
+  font-weight: var(--weight-medium);
+  color: var(--grey-color-1);
+  background: var(--grey-color-2);
 }
 
 .footer {

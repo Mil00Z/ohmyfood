@@ -1,0 +1,117 @@
+
+.restaurants {
+    padding:var(--body-padding-vm);
+
+    &--list {
+        --gap:2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap:var(--gap)
+    }
+
+    &--title {
+        // @include title(section);
+    }
+
+    &--card {
+        @include card(restaurants);
+    }
+
+    &--thumb {
+        width:100%;
+        max-height:230px;
+        object-fit: cover;
+    }
+
+    &--status {
+        --pos:4%;
+        position: absolute;
+        right:var(--pos);
+        top:var(--pos);
+       
+        &.new {
+            width:fit-content;
+            padding:10px;
+            border-radius:2px;
+            font:{
+                size:.85rem;
+                weight:var(--weight-medium);
+            }
+            background:var(--third-color);
+            color:var(--fourth-color);
+        }
+
+    
+        &.none {
+            display:none,
+        }
+
+    
+    }
+
+    &--content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:var(--paddingCard);
+    }
+
+    
+    &--icons{
+        i {
+            transform-origin: center;
+            transform:scale(1);
+            will-change: transform;
+
+            &::before{
+                font : {
+                    size: 1.25rem;
+                    weight:400;
+                }
+                transition: font-weight .06s ease-in-out;
+            }
+
+            &:hover{
+                transform: scale(1.15);
+                cursor: pointer;
+            
+                &::before{
+                    font-weight:800;
+                    background: linear-gradient(var(--linear-gradient-heart));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+       
+    
+    }
+
+    &--text{
+
+    }
+
+    &--name {
+        margin-block:0;
+
+        font:{
+            size:1.125rem;
+            weight:var(--weight-bold);
+        }
+
+    }
+
+    &--geoloc {
+
+        font:{
+            size:1,0625rem;
+            weight:var(--weight-light);
+        }
+
+    }
+
+
+
+   
+}
