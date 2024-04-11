@@ -405,16 +405,23 @@ a {
 }
 .restaurants--icons i {
   transform-origin: center;
-  transition: var(--transition-regular);
+  transform: scale(1);
+  will-change: transform;
 }
 .restaurants--icons i::before {
   font-size: 1.25rem;
+  font-weight: 400;
+  transition: font-weight 0.06s ease-in-out;
 }
 .restaurants--icons i:hover {
-  font-weight: 900;
-  transform: scale(1.25);
-  color: var(--primary-color);
+  transform: scale(1.15);
   cursor: pointer;
+}
+.restaurants--icons i:hover::before {
+  font-weight: 800;
+  background: linear-gradient(var(--linear-gradient-heart));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurants--name {
   margin-block: 0;

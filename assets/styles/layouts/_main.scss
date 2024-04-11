@@ -125,8 +125,6 @@
         }
 
     
-
-
     }
 
     &--content {
@@ -140,18 +138,27 @@
     &--icons{
         i {
             transform-origin: center;
-            transition: var(--transition-regular);
+            transform:scale(1);
+            will-change: transform;
 
             &::before{
-            font-size: 1.25rem;
-
+                font : {
+                    size: 1.25rem;
+                    weight:400;
+                }
+                transition: font-weight .06s ease-in-out;
             }
 
             &:hover{
-                font-weight:900;
-                transform: scale(1.25);
-                color:var(--primary-color);
+                transform: scale(1.15);
                 cursor: pointer;
+            
+                &::before{
+                    font-weight:800;
+                    background: linear-gradient(var(--linear-gradient-heart));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
             }
         }
 
