@@ -1,0 +1,98 @@
+@mixin notices($notice-layout:''){
+
+
+    @if $notice-layout == index {
+    // --gap:25px;
+    // display:flex;
+    // flex-direction:column;
+    // row-gap:var(--gap);
+        padding:var(--body-padding-vm);
+
+        &--list {
+            margin: 0;
+            padding: 0;
+            counter-reset: item;
+            list-style-type: none;
+            
+    
+            & > li {
+                position:relative;
+                margin-block:1rem;
+                padding-left:var(--body-padding-vm);
+                
+                &::before {
+                    --square:25px;
+                    --radius:50px;
+                    content:counter(item);
+                    position: absolute;
+                    top:50%;
+                    left:0;
+                    transform:translate(0, -50%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width:var(--square);
+                    height:var(--square);
+                    counter-increment: item;
+                    background:var(--primary-color);
+                    border-radius: var(--radius);
+                    color:var(--white-color);
+                    font : {
+                        family:var(--body-font);
+                        size:12px;
+                    }
+                }
+    
+            }
+        }
+    
+        &--title {
+            // @include title(section);
+        }
+    
+        &--link{
+            --op:.15;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            padding:1rem;
+            text-align: center;
+            font:{
+                size:1rem;
+                weight:var(--weight-medium);
+            }
+            color:var(--black-color);
+            background:var(--background-color);
+            border-radius:var(--radius);
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, var(--op));
+    
+            & > i {
+                margin-right:15px;
+                color:var(--grey-color-1);
+                font-size: 19px;
+                transition:var(--transition-regular);
+                
+                &.fa-store {
+                    color:var(--primary-color);
+                }
+            }
+
+            &:hover {
+                --op:.25;
+                    i {
+                        transform:scale(1.15);
+                        color:var(--primary-color);
+                    }
+            }
+        }
+
+
+    }
+}
+
+
+
+.notice {
+    @include notices(index);
+}
