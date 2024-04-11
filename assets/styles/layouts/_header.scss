@@ -8,11 +8,18 @@
 
 .back-to-town {
     margin-inline:var(--body-padding-vm) calc( (-1) * var(--body-padding-vm));
+    transition: var(--transition-regular);
 
     .fa-arrow-left {
         font-size:1.4rem;
         color:var(--grey-color-1);
     }
+
+    &:hover{
+        animation: to-back .5s ease-in-out infinite alternate;
+    }
+    
+    @include animation-back(to-back,-6px);
 }
 
 .logo {

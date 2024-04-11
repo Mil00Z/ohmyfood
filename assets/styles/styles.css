@@ -267,10 +267,22 @@ a {
 
 .back-to-town {
   margin-inline: var(--body-padding-vm) calc(-1 * var(--body-padding-vm));
+  transition: var(--transition-regular);
 }
 .back-to-town .fa-arrow-left {
   font-size: 1.4rem;
   color: var(--grey-color-1);
+}
+.back-to-town:hover {
+  animation: to-back 0.5s ease-in-out infinite alternate;
+}
+@keyframes to-back {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-5px);
+  }
 }
 
 .logo {
