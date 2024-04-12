@@ -17,6 +17,10 @@
             weight:var(--weight-bold);
             size:var(--title-font-size);
         }
+
+        @include responsive-desk(){
+            font-size:40px;
+        }
     
     }
 
@@ -30,7 +34,6 @@
     }
 
     @else if $title-type == 'section' {
-
         font : {
             weight:var(--weight-bold);
             size:var(--title-font-size);

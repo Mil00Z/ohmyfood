@@ -1,23 +1,41 @@
 .food-store{
 
     .hero--title{
-        --radius:50px;
+        --radius:35px;
+        --width-skeleton:#{map-get($responsiveness,'width-skeleton-vm')};
         display: flex;
         align-items: center;
-        width:100%;
+        width:var(--width-skeleton);
         margin-block:auto 0;
-        padding:2.5rem var(--body-padding-vm) 1rem;
+        padding:1.75rem var(--body-padding-vm) 1rem;
         @include title(hero-store);
         border-radius:var(--radius) var(--radius) 0 0;
-        background:var(--white-color);
+        background:var(--background-color);
         box-shadow: -4px -10px 12px 0px rgba(0,0,0,.22);
+
+        @include responsive-desk(){
+            --width-skeleton:#{map-get($responsiveness,'width-skeleton-desk')};
+            justify-content: center;
+            padding-top:1.5rem;
+    
+        }
+
+        .skeleton{
+            background: var(--background-color);
+        }
 
         .restaurants--icons {
             margin-left:auto;
         }
     }
-    
-   
+
+    .menus {
+        padding-inline:0;
+
+        @include responsive-desk(){
+            background:var(--white-color);
+        }
+    }
 
 
     //Special Styles for Pages
@@ -29,12 +47,21 @@
             
             .hero {
                 width:100%;
-                min-height:333px;
+                height:300px;
                 padding:0;
                 background : {
                     size:cover;
+                    repeat:no-repeat;
                     position: center -50px;
                     image:url(#{$page-data});
+                }
+
+                @include responsive-desk(){
+                    height:400px;
+                    background : {
+                        position: center -500px;
+                    }
+
                 }
                     
             }

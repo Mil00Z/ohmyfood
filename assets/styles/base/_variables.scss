@@ -36,16 +36,18 @@ $colors: (
  );
 
  $responsiveness: (
+   width-skeleton-vm:100%,
    body-padding-vm:1rem,
+   width-skeleton-tab:unset,
    body-padding-tab:1.35rem,
-   body-padding-desk:2rem,
+   width-skeleton-desk:60%,
+   body-padding-desk:2rem
  );
 
 // Anothers
 $testing-color:#FF00FF;
 
-
-// Pages
+// Pages Datas
 $pages : (
    palette-gout:'../images/restaurants/menilmontant.jpg',
    delice-sens:'../images/restaurants/folie-mericourt.jpg',

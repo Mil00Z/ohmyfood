@@ -33,6 +33,7 @@
 
 body {
     --layout:'Mobile';
+    --width-skeleton:#{map-get($responsiveness,'width-skeleton-vm')};
     --padding:0;
     margin: 0;
     padding: var(--padding);
@@ -42,5 +43,22 @@ body {
         size:1rem;
     }
     background:var(--white-color);
+
+    @include responsive-desk(){
+        --width-skeleton:#{map-get($responsiveness,'width-skeleton-desk')};
+    }
+}
+
+
+.skeleton {
+    width:var(--width-skeleton);
+    padding: 0 var(--body-padding-vm);
+  
+    @include responsive-desk(){
+        display: block;
+        margin: 0 auto;
+        padding: 0 var(--body-padding-desk) var(--body-padding-desk);
+        background: var(--background-color);
+    }
 }
 

@@ -1,12 +1,19 @@
-
 .restaurants {
-    padding:var(--body-padding-vm);
+
+    padding:var(--body-padding-vm) 0;
+    background: var(--background-color);
 
     &--list {
         --gap:2rem;
         display: flex;
         flex-direction: column;
-        row-gap:var(--gap)
+        row-gap:var(--gap);
+
+        @include responsive-desk(){
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     &--title {
@@ -21,6 +28,10 @@
         width:100%;
         max-height:230px;
         object-fit: cover;
+
+        @include responsive-desk(){
+            max-height:200px;
+        }
     }
 
     &--status {
@@ -113,5 +124,16 @@
 
 
 
+   
+}
+
+.notice {
+
+    .skeleton{
+        @include responsive-desk(){
+            background:var(--color-white);
+        }
+
+    }
    
 }

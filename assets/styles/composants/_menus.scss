@@ -1,13 +1,21 @@
 @mixin menu($menu-type:''){
 
     padding:0 var(--body-padding-vm);
+    background: var(--background-color);
+    
 
     &--content{
         margin-bottom:1rem;
+
+        @include responsive-desk(){
+            margin-bottom:2.25rem;
+            // background: var(--background-color);
+        }
     }
 
     &--title {
         width:fit-content;
+        margin-top: 0;
         position: relative;
         font : {
             weight:400;
@@ -44,6 +52,7 @@
         align-items: center;
         height:80px;
         overflow: hidden;
+        background:var(--white-color);
         border-radius: var(--radius);
         box-shadow: 2px 2px 8px 1px rgba(0,0,0,.25);
 
@@ -110,8 +119,6 @@
         
     }
 
-    
-
     &--link {
         display: block;
         width:190px;
@@ -124,7 +131,10 @@
         }
     }
 
-    
+    @include responsive-desk() {
+        padding:0;
+    }
+
 
 }
 

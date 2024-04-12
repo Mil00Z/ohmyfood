@@ -7,6 +7,14 @@
     padding:var(--body-padding-vm) 2rem;
     background:var(--grey-color-1);
 
+    @include responsive-desk(){
+        --gap:5vw;
+        flex-direction: row-reverse;
+        align-items: center;
+        column-gap:var(--gap);
+    }
+
+
     &--title{
 
         color:var(--white-color);
@@ -23,6 +31,12 @@
         display: flex;
         flex-direction: column;
         row-gap:.85rem;
+
+        @include responsive-desk(){
+            --gap:2rem;
+            flex-direction: row;
+            column-gap:var(--gap);
+        }
     }
 
     &--link {
@@ -38,4 +52,5 @@
         }
     }
 
+    
 }
