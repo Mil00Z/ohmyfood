@@ -26,6 +26,11 @@
             position:relative;
             --card-type:#{$card-type};
 
+
+            @include responsive-desk(){
+                width:45%;
+            }
+
         }
     
         

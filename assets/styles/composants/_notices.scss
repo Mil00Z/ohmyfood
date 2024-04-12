@@ -2,23 +2,31 @@
 
 
     @if $notice-layout == index {
-    // --gap:25px;
-    // display:flex;
-    // flex-direction:column;
-    // row-gap:var(--gap);
-        padding:var(--body-padding-vm);
+        margin-bottom: 3rem;
+        background:var(--white-color);
 
         &--list {
             margin: 0;
             padding: 0;
             counter-reset: item;
             list-style-type: none;
+
+            @include responsive-desk(){
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
             
     
             & > li {
                 position:relative;
                 margin-block:1rem;
                 padding-left:var(--body-padding-vm);
+
+
+                @include responsive-desk(){
+                    width: 30%;
+                }
                 
                 &::before {
                     --square:25px;
