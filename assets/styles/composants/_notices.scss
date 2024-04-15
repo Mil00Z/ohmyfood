@@ -2,7 +2,7 @@
 
 
     @if $notice-layout == index {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         background:var(--white-color);
 
         &--list {
@@ -12,9 +12,11 @@
             list-style-type: none;
 
             @include responsive-desk(){
+                --gap:2rem;
                 display: flex;
-                justify-content: space-around;
+                // justify-content: space-around;
                 align-items: center;
+                column-gap: var(--gap);
             }
             
     

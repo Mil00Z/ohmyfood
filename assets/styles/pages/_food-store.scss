@@ -26,6 +26,10 @@
 
         .restaurants--icons {
             margin-left:auto;
+
+            @include responsive-desk(){
+                margin-left: 2rem;
+            }
         }
     }
 
