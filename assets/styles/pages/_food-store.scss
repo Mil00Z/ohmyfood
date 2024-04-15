@@ -1,9 +1,10 @@
 .food-store{
 
     .hero--title{
-        --radius:35px;
+        --radius:40px;
         --width-skeleton:#{map-get($responsiveness,'width-skeleton-vm')};
         display: flex;
+        justify-content: space-between;
         align-items: center;
         width:var(--width-skeleton);
         margin-block:auto 0;
@@ -17,28 +18,36 @@
             --width-skeleton:#{map-get($responsiveness,'width-skeleton-desk')};
             justify-content: center;
             padding-top:1.5rem;
+        }
+
     
-        }
-
-        .skeleton{
-            background: var(--background-color);
-        }
-
         .restaurants--icons {
-            margin-left:auto;
+            margin-right:2rem;
 
             @include responsive-desk(){
-                margin-left: 2rem;
+                margin-inline:2rem;
             }
         }
     }
 
     .menus {
-        padding-inline:0;
+        padding :{
+            bottom:2rem;
+            inline:0;
+        }
+   
 
         @include responsive-desk(){
+            padding-bottom:0;
             background:var(--white-color);
         }
+
+
+        
+    }
+
+    .skeleton{
+        background: var(--background-color);
     }
 
 
