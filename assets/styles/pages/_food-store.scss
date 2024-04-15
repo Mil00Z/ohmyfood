@@ -43,9 +43,48 @@
         }
 
 
-        
+        &--content{
+            
+            
+            &.entries {
+                
+                & .menus--list{
+                    animation-delay: 1.2s;
+                }
+                
+            }
+    
+            &.plats{
+              
+    
+                & .menus--list{
+                    animation-delay: 2.5s;
+                }
+    
+            }
+    
+            &.desserts{
+               
+    
+                & .menus--list{
+                    animation-delay: 3.7s;
+                }
+    
+            }
+
+        }
+
+        &--list{
+            opacity: 0;
+            animation:hello 2s 1 ease-in-out forwards;
+            transition: var(--transition-regular);
+            @include animation-here(hello);
+
+        }
+
     }
 
+   
     .skeleton{
         background: var(--background-color);
     }

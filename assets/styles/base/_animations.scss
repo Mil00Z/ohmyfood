@@ -8,12 +8,25 @@
         }
     
         to {
-            transform: translateX(-5px);
+            transform: translateX($endpoint);
         }
 
     }
 
-
-
 }
+
+@mixin animation-here($name){
+
+    @keyframes #{$name} {
+
+        from{
+            opacity: 0;
+        } 
+        
+        to{
+            opacity: 1;
+        }
+    }
+}
+
 
