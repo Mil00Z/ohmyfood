@@ -8,12 +8,56 @@
         }
     
         to {
-            transform: translateX(-5px);
+            transform: translateX($endpoint);
         }
 
     }
 
+}
+
+@mixin animation-here($name){
+
+    @keyframes #{$name} {
+
+        from{
+            opacity: 0;
+        } 
+        
+        to{
+            opacity: 1;
+        }
+    }
+}
+
+@mixin loader($name){
+
+        @keyframes #{$name}{
+
+            from{
+                transform:rotateZ(0deg);
+            }
+
+            from{
+                transform:rotateZ(360deg);
+            }
+        }
 
 
 }
 
+@mixin fade-in-out($name){
+
+    @keyframes #{$name} {
+
+        from {
+            visibility: visible;
+            
+        }
+
+        to {
+            visibility:hidden;
+            display: none;
+        }
+
+    }
+}
