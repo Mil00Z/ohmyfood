@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block:2rem;
+    padding:2rem var(--body-padding-vm);
+    
 
     &--title {
         margin-block: 0;
