@@ -29,4 +29,35 @@
     }
 }
 
+@mixin loader($name){
 
+        @keyframes #{$name}{
+
+            from{
+                transform:rotateZ(0deg);
+            }
+
+            from{
+                transform:rotateZ(360deg);
+            }
+        }
+
+
+}
+
+@mixin fade-in-out($name){
+
+    @keyframes #{$name} {
+
+        from {
+            visibility: visible;
+            
+        }
+
+        to {
+            visibility:hidden;
+            display: none;
+        }
+
+    }
+}
