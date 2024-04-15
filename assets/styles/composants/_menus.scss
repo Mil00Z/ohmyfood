@@ -87,7 +87,7 @@
         &-name{
             margin-block: 0 .25rem;
             font : {
-                size:1.12rem;
+                size:1.125rem;
                 weight:var(--weight-medium);
             }
         }
@@ -102,7 +102,7 @@
         &-price {
 
             font : {
-                size:.95rem;
+                size:.94rem;
                 weight:var(--weight-bold);
             }
             color:var(--grey-color-1);
@@ -112,7 +112,7 @@
             cursor:pointer;
 
            & > .menus--item-surprise {
-                    width:17.5%;
+                    width:80px;
                 }
 
         }
@@ -125,9 +125,10 @@
         margin:2rem auto;
         text-align: center;
         @include button(link);
+        transition: var(--transition-regular);
 
         &:hover {
-            width:230px;
+            width:215px;
         }
     }
 

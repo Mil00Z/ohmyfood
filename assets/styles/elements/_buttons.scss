@@ -12,12 +12,12 @@
             size:1rem;
             weight:var(--weight-medium);
         };
-        box-shadow:0 5px 10px 0 rgba(0, 0, 0, var(--op));;
+        box-shadow:0 4px 10px 0 rgba(0, 0, 0, var(--op));;
         transition:var(--transition-regular);
 
         &:hover{
-        --op:.4;
-        opacity:.8;
+        --op:.45;
+        opacity:.75;
         }
 
     }
