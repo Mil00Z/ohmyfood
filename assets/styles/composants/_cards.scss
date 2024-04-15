@@ -2,13 +2,12 @@
 
     --paddingCard:1rem;
     --card-radius:var(--radius);
-    --op:.36;
+    --op:.15;
     display:flex;
-    
-    background-color: white;
+    background-color: var(--white-color);
     border-radius: var(--card-radius);
     overflow: hidden;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, var(--op)));
+    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, var(--op)));
     transition: var(--transition-regular);
     will-change: transform;
     
@@ -28,7 +27,8 @@
 
 
             @include responsive-desk(){
-                width:45%;
+                --paddingCard:.75rem;
+                width:clamp(400px,490px,50%);
             }
 
         }
