@@ -1,0 +1,14 @@
+// Mixins
+@mixin responsive-desk($bk-size:''){
+    @media all and (min-width:760px){
+        @content;
+    }
+
+}
+
+@mixin responsive-tab($bk-size:''){
+
+    @media all and (min-width:500px) and (max-width:759px) {
+        @content;
+    }
+}

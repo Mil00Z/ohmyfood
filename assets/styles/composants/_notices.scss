@@ -98,6 +98,11 @@
         }
 
 
+        @include responsive-desk(){
+            margin-bottom:0;
+        }
+
+
     }
 }
 

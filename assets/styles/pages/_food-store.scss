@@ -8,7 +8,7 @@
         align-items: center;
         width:var(--width-skeleton);
         margin-block:auto 0;
-        padding:1.75rem var(--body-padding-vm) 1rem;
+        padding:1.55rem .5rem 1rem;
         @include title(hero-store);
         border-radius:var(--radius) var(--radius) 0 0;
         background:var(--background-color);
@@ -22,7 +22,7 @@
 
     
         .restaurants--icons {
-            margin-right:2rem;
+            margin-right:1.5rem;
 
             @include responsive-desk(){
                 margin-inline:2rem;
@@ -76,7 +76,7 @@
 
         &--list{
             opacity: 0;
-            animation:hello 2s 1 ease-in-out forwards;
+            animation:hello 1.2s 1 ease-in-out forwards;
             transition: var(--transition-regular);
             @include animation-here(hello);
 
@@ -104,16 +104,22 @@
                 background : {
                     size:cover;
                     repeat:no-repeat;
-                    position: center -50px;
+                    // position: center -50px;
+                    position:center;
                     image:url(#{$page-data});
                 }
 
                 @include responsive-desk(){
-                    height:400px;
+                    max-height:400px;
                     background : {
-                        position: center -500px;
+                        // position: center -425px;
                     }
 
+                }
+
+                @include responsive-tab(){
+                    --datra:"coucou";
+                    // background-position:center -250px;
                 }
                     
             }

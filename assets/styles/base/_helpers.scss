@@ -15,10 +15,3 @@
 
 }
 
-@mixin responsive-desk($bk-size:''){
-    @media all and (min-width:760px){
-        @content;
-    }
-
-}
-
