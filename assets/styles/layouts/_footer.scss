@@ -12,9 +12,10 @@
         flex-direction: row-reverse;
         align-items: center;
         column-gap:var(--gap);
+        padding:2rem 3rem;
     }
 
-
+   
     &--title{
         margin:0;
         color:var(--white-color);
