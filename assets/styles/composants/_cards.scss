@@ -28,8 +28,8 @@
 
             @include responsive-desk(){
                 --paddingCard:.75rem;
-                // width:clamp(400px,45%,490px);
-                width:45%;
+                width:clamp(600px,48%,770px);
+                // width:47%;
             }
 
             @include responsive-tab(){
