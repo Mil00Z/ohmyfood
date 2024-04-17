@@ -45,10 +45,12 @@ body {
     background:var(--white-color);
 
     @include responsive-desk(){
+        --layout:'Desk';
         --width-skeleton:#{map-get($responsiveness,'width-skeleton-desk')};
     }
 
     @include responsive-tab(){
+        --layout:'Tab';
         --width-skeleton:#{map-get($responsiveness,'width-skeleton-tab')};
     }
 }
