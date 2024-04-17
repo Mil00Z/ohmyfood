@@ -29,23 +29,9 @@
     }
 }
 
-@mixin loader($name){
+@mixin fade-in-out($name,$timing:''){
 
-        @keyframes #{$name}{
-
-            from{
-                transform:rotateZ(0deg);
-            }
-
-            from{
-                transform:rotateZ(360deg);
-            }
-        }
-
-
-}
-
-@mixin fade-in-out($name){
+    animation:#{$name} $timing ease-in-out forwards;
 
     @keyframes #{$name} {
 
@@ -58,4 +44,72 @@
         }
 
     }
+}
+
+@mixin circle-mooving($name,$top:'',$sides:''){
+    --radius:30px;
+    animation:#{$name} 1.85s ease-in-out .15s forwards;
+
+
+    @keyframes #{$name} {
+
+
+        @if $name == top {
+
+            from{
+                top:$top;
+                left:$sides;
+                transform: translateX(-50%) rotateZ(0);
+                border-radius:0;
+            }
+    
+            to {
+                top:0;
+                left:$sides;
+                transform:translateX(-50%) rotateZ(360deg);
+                border-radius:var(--radius);
+            }
+
+        }
+
+        @else if $name == right {
+
+            from{
+                top: $top;
+                right: $sides;
+                transform: translateX(50%) rotateZ(0);
+                border-radius:0;
+            }
+    
+            to {
+                top:75%;
+                right:0;
+                transform:translateX(50%) rotateZ(-360deg);
+                border-radius:var(--radius);
+            }
+
+        }
+
+        @else if $name == left {
+
+            from{
+                top: $top;
+                left: $sides;
+                transform:translateX(-50%) rotateZ(0deg);
+                border-radius:0;
+            }
+    
+            to {
+                top:75%;
+                left:0;
+                transform:translateX(-50%) rotateZ(360deg);
+                border-radius:var(--radius);
+            }
+
+        }
+
+
+    }
+
+
 }
