@@ -15,7 +15,8 @@
 
 }
 
-@mixin animation-here($name){
+@mixin animation-here($name,$timing:''){
+    animation:#{$name} $timing 1 ease-in-out forwards;
 
     @keyframes #{$name} {
 

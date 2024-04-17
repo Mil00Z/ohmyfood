@@ -49,7 +49,7 @@
             &.entries {
                 
                 & .menus--list{
-                    animation-delay: 1.2s;
+                    animation-delay: .85s;
                 }
                 
             }
@@ -58,7 +58,7 @@
               
     
                 & .menus--list{
-                    animation-delay: 2.5s;
+                    animation-delay: 1.65s;
                 }
     
             }
@@ -67,7 +67,7 @@
                
     
                 & .menus--list{
-                    animation-delay: 3.7s;
+                    animation-delay: 2.45s;
                 }
     
             }
@@ -76,9 +76,8 @@
 
         &--list{
             opacity: 0;
-            animation:hello 1.2s 1 ease-in-out forwards;
             transition: var(--transition-regular);
-            @include animation-here(hello);
+            @include animation-here(hello,1.9s);
 
         }
 
@@ -111,15 +110,9 @@
 
                 @include responsive-desk(){
                     max-height:400px;
-                    background : {
-                        // position: center -425px;
-                    }
-
                 }
 
                 @include responsive-tab(){
-                    --datra:"coucou";
-                    // background-position:center -250px;
                 }
                     
             }

@@ -43,10 +43,6 @@
     }
 
     &--item {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: end;
-        // padding:1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -62,26 +58,14 @@
             align-items: end;
             width:100%;
             padding:.95rem;
-
+            transition: var(--transition-regular);
         }
 
-        
-        &-surprise {
-            width:0;
-            height:100%;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            background:#99E2D0;
-            transition:var(--transition-regular);
-    
-            & > i {
-                font-size:1.5rem;
-                color:var(--white-color);
-                transition:var(--transition-regular);
-            }
-    
-            
+        &-left {
+            width:fit-content;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
         }
 
         &-name{
@@ -90,6 +74,9 @@
                 size:1.125rem;
                 weight:var(--weight-medium);
             }
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         &-desc{
@@ -108,12 +95,40 @@
             color:var(--grey-color-1);
         }
 
+        &-surprise {
+            width:0;
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background:map-get($colors,third-color);
+            transition:var(--transition-regular);
+    
+            & > i {
+                font-size:1.5rem;
+                color:var(--white-color);
+                transition:var(--transition-regular);
+            }
+    
+        }
+
+
         &:hover {
             cursor:pointer;
 
-           & > .menus--item-surprise {
-                    width:80px;
-                }
+           .menus--item-data {
+            width:80%;
+
+            @include responsive-desk(){
+            width:100%;
+            }
+    
+           } 
+
+           
+           .menus--item-surprise {
+            width:85px;
+            }
 
         }
         
