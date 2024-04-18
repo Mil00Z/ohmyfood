@@ -37,11 +37,14 @@
     @keyframes #{$name} {
 
         from {
+            content-visibility: visible;
             visibility: visible;
+
         }
 
         to {
             visibility:hidden;
+            content-visibility: hidden;
         }
 
     }
@@ -49,7 +52,7 @@
 
 @mixin circle-mooving($name,$top:'',$sides:''){
     --radius:30px;
-    animation:#{$name} 1.85s ease-in-out .15s forwards;
+    animation:#{$name} 2.5s ease-in-out 1s forwards;
 
 
     @keyframes #{$name} {
@@ -69,6 +72,7 @@
                 left:$sides;
                 transform:translateX(-50%) rotateZ(360deg);
                 border-radius:var(--radius);
+                
             }
 
         }
@@ -87,6 +91,7 @@
                 right:0;
                 transform:translateX(50%) rotateZ(-360deg);
                 border-radius:var(--radius);
+               
             }
 
         }
@@ -105,6 +110,7 @@
                 left:0;
                 transform:translateX(-50%) rotateZ(360deg);
                 border-radius:var(--radius);
+                
             }
 
         }
