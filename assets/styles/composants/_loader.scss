@@ -11,7 +11,7 @@
  
     background: rgba(255,255,255,var(--op));
     transition:var(--transition-regular);
-    @include fade-in-out(houdini,4s);
+    @include fade-in-out(houdini,3s);
 
     .loader-wrapper{
         --gap:3rem;

@@ -39,7 +39,6 @@
         from {
             content-visibility: visible;
             visibility: visible;
-
         }
 
         to {
@@ -52,7 +51,7 @@
 
 @mixin circle-mooving($name,$top:'',$sides:''){
     --radius:30px;
-    animation:#{$name} 2.5s ease-in-out 1s forwards;
+    animation:#{$name} 1.85s ease-in-out 1s forwards;
 
 
     @keyframes #{$name} {
